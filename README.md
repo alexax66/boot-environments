@@ -2,7 +2,7 @@
 
 GUI and backend to manage backup and Boot Environments for zfs.
 
-![image](https://github.com/alexax66/backup-station/raw/master/main_window-en.png)
+![image](https://github.com/alexax66/boot-environments/raw/main/resources/main_window-en.png)
 
 This utility written in PyQt5, meant for use with [FreeBSD](https://www.freebsd.org) and [GhostBSD](https://ghostbsd.org)
 
@@ -13,10 +13,10 @@ This utility written in PyQt5, meant for use with [FreeBSD](https://www.freebsd.
 * Forked from [Boot Environments.app](https://github.com/helloSystem/Utilities/tree/master/Preferences/Boot%20Environments.app)
 * Adapted for Mate Desktop Environment in FreeBSD (need install [PyQt5](https://www.freshports.org/devel/py-qt5))
 * Reworked help menu
-![image](https://github.com/alexax66/backup-station/raw/master/help_window-en.png)
+![image](https://github.com/alexax66/boot-environments/raw/main/resources/help_window-en.png)
 * Added translation (yet Russain only)
-![image](https://github.com/alexax66/backup-station/raw/master/main_window-ru.png)
-![image](https://github.com/alexax66/backup-station/raw/master/help_window-ru.png)
+![image](https://github.com/alexax66/boot-environments/raw/main/resources/main_window-ru.png)
+![image](https://github.com/alexax66/boot-environments/raw/main/resources/help_window-ru.png)
 * Tested on FreeBSD 13.1 and GhostBSD 22.06.18
 
 ## Todo
