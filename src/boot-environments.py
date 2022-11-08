@@ -327,7 +327,7 @@ class BootEnvironmentsManager(object):
 
     def new(self, sender):
         text, ok = QtWidgets.QInputDialog.getText(self.window, _("New"),
-                                                  _("Boot Environment Name:"), QtWidgets.QLineEdit.Normal,
+                                                  _("Enter Boot Environment name:"), QtWidgets.QLineEdit.Normal,
                                                   "")
         if ok and text:
 
@@ -443,8 +443,8 @@ class BootEnvironmentsManager(object):
             self.timer.start()
 
     def rename(self):
-        text, ok = QtWidgets.QInputDialog.getText(self.window, _("New"),
-                                                  _("Boot Environment Name:"), QtWidgets.QLineEdit.Normal,
+        text, ok = QtWidgets.QInputDialog.getText(self.window, _("Renaming"),
+                                                  _("Enter new Boot Environment name:"), QtWidgets.QLineEdit.Normal,
                                                   "")
         if ok and text:
 
@@ -466,7 +466,7 @@ class BootEnvironmentsManager(object):
 
         reply = QtWidgets.QMessageBox.question(
             self.window,
-            _("Rename"),
+            _("Renaming"),
             _("Do you really want to rename %s?") % boot_environment,
             QtWidgets.QMessageBox.Cancel,
             QtWidgets.QMessageBox.Ok
