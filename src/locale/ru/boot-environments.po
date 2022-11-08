@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 00:38+0300\n"
-"PO-Revision-Date: 2022-10-11 16:57+0300\n"
+"POT-Creation-Date: 2022-11-07 23:47+0300\n"
+"PO-Revision-Date: 2022-11-07 23:51+0300\n"
 "Last-Translator: Alexander Alexeev <alexax66@gmail.com>\n"
 "Language-Team: Language locale/ru\n"
 "Language: ru\n"
@@ -34,52 +34,56 @@ msgstr "Перезапуск..."
 msgid "New..."
 msgstr "Новое..."
 
-#: src/boot-environments.py:119 src/boot-environments.py:390
-msgid "Remove"
-msgstr "Удаление"
+#: src/boot-environments.py:119 src/boot-environments.py:469
+msgid "Rename"
+msgstr "Переименовать"
 
-#: src/boot-environments.py:122 src/boot-environments.py:259
-#: src/boot-environments.py:268
+#: src/boot-environments.py:122 src/boot-environments.py:393
+msgid "Remove"
+msgstr "Удалить"
+
+#: src/boot-environments.py:125 src/boot-environments.py:262
+#: src/boot-environments.py:271
 msgid "Unmount"
 msgstr "Отмотровать"
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Boot Environment"
 msgstr "Имя"
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Active"
 msgstr "Активно"
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Mountpoint"
 msgstr "Точка монтрования"
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Space"
 msgstr "Размер"
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Created"
 msgstr "Создано"
 
-#: src/boot-environments.py:185
+#: src/boot-environments.py:188
 msgid "Now and on reboot"
 msgstr "Сейчас и при сл. старте"
 
-#: src/boot-environments.py:188
+#: src/boot-environments.py:191
 msgid "Now"
 msgstr "Сейчас"
 
-#: src/boot-environments.py:190
+#: src/boot-environments.py:193
 msgid "On reboot"
 msgstr "При сл. старте"
 
-#: src/boot-environments.py:229
+#: src/boot-environments.py:232
 msgid "Restart"
 msgstr "Перезапуск"
 
-#: src/boot-environments.py:230
+#: src/boot-environments.py:233
 msgid ""
 "Are you sure you want to restart your computer now?\n"
 "All unsaved work will be lost."
@@ -87,42 +91,43 @@ msgstr ""
 "Вы действительно хотите сейчас перезагрузить компьютер?\n"
 "Все несохраненные данные будут потеряны."
 
-#: src/boot-environments.py:265
+#: src/boot-environments.py:268
 msgid "Mount"
 msgstr "Примотировать"
 
-#: src/boot-environments.py:296 src/boot-environments.py:313
-#: src/boot-environments.py:352 src/boot-environments.py:369
-#: src/boot-environments.py:414 src/boot-environments.py:431
-#: src/boot-environments.py:478 src/boot-environments.py:495
+#: src/boot-environments.py:299 src/boot-environments.py:316
+#: src/boot-environments.py:355 src/boot-environments.py:372
+#: src/boot-environments.py:417 src/boot-environments.py:434
+#: src/boot-environments.py:493 src/boot-environments.py:510
+#: src/boot-environments.py:557 src/boot-environments.py:574
 msgid "Error"
 msgstr "Ошибка"
 
-#: src/boot-environments.py:310
+#: src/boot-environments.py:313
 msgid "Could not activate Boot Environment"
 msgstr "Невозможно активироать это окружение"
 
-#: src/boot-environments.py:326
+#: src/boot-environments.py:329 src/boot-environments.py:446
 msgid "New"
 msgstr "Новое"
 
-#: src/boot-environments.py:327
+#: src/boot-environments.py:330 src/boot-environments.py:447
 msgid "Boot Environment Name:"
 msgstr "Имя загрузочного окружения:"
 
-#: src/boot-environments.py:346
+#: src/boot-environments.py:349
 msgid "bectl create started"
 msgstr "bectl запустил создание"
 
-#: src/boot-environments.py:348
+#: src/boot-environments.py:351
 msgid "bectl create cannot be launched"
 msgstr "bectl не может запустить создание"
 
-#: src/boot-environments.py:366
+#: src/boot-environments.py:369
 msgid "Could not create Boot Environment"
 msgstr "Не возможно создать загрузочное окружение"
 
-#: src/boot-environments.py:391
+#: src/boot-environments.py:394
 #, python-format
 msgid ""
 "Do you really want to remove %s?\n"
@@ -131,74 +136,96 @@ msgstr ""
 "Вы дествительно ходите удалить %s?\n"
 "Эта оперция не может быть отменена"
 
-#: src/boot-environments.py:397
+#: src/boot-environments.py:400
 #, python-format
 msgid "Removing: %s"
 msgstr "Удаление: %s "
 
-#: src/boot-environments.py:408
+#: src/boot-environments.py:411
 msgid "bectl destroy started"
 msgstr "bectl запустил удаление"
 
-#: src/boot-environments.py:410
+#: src/boot-environments.py:413
 msgid "bectl destroy cannot be launched"
 msgstr "bectl не может запустить удаление"
 
-#: src/boot-environments.py:428
+#: src/boot-environments.py:431
 msgid "Could not destroy Boot Environment"
 msgstr "Невозможно удалить загрузочное окружение"
 
-#: src/boot-environments.py:474
+#: src/boot-environments.py:470
+#, python-format
+msgid "Do you really want to rename %s?"
+msgstr "Вы дествительно ходите переименовать %s?"
+
+#: src/boot-environments.py:476
+#, python-format
+msgid "Renaming: %s"
+msgstr "Переименование: %s "
+
+#: src/boot-environments.py:487
+msgid "bectl renaming started"
+msgstr "bectl запустил переименование"
+
+#: src/boot-environments.py:489
+msgid "bectl renaming cannot be launched"
+msgstr "bectl не может запустить перименование"
+
+#: src/boot-environments.py:507
+msgid "Could not renaming  Boot Environment"
+msgstr "Не возможно перименовать загрузочное окружение"
+
+#: src/boot-environments.py:553
 #, python-format
 msgid "bectl %s cannot be launched"
 msgstr "bectl не может запусить %s"
 
-#: src/boot-environments.py:492
+#: src/boot-environments.py:571
 #, python-format
 msgid "Could not %s Boot Environment"
 msgstr "Невозможно выполнить %s для этого загрузчного окружения"
 
-#: src/boot-environments.py:521
+#: src/boot-environments.py:600
 msgid "&Quit"
 msgstr "&Выйти"
 
-#: src/boot-environments.py:522
+#: src/boot-environments.py:601
 msgid "Ctrl+Q"
 msgstr ""
 
-#: src/boot-environments.py:523
+#: src/boot-environments.py:602
 msgid "Exit application"
 msgstr "Закрыть приложение"
 
-#: src/boot-environments.py:526
+#: src/boot-environments.py:605
 msgid "&File"
 msgstr "&Файл"
 
-#: src/boot-environments.py:529
+#: src/boot-environments.py:608
 msgid "&About"
 msgstr "&О приложении"
 
-#: src/boot-environments.py:530
+#: src/boot-environments.py:609
 msgid "About this application"
 msgstr "Об этом приложении"
 
-#: src/boot-environments.py:533
+#: src/boot-environments.py:612
 msgid "&Usage"
 msgstr "Использование"
 
-#: src/boot-environments.py:534
+#: src/boot-environments.py:613
 msgid "How use this application"
 msgstr "Как пользоваться этим приложением"
 
-#: src/boot-environments.py:536
+#: src/boot-environments.py:615
 msgid "&Help"
 msgstr "&Помощь"
 
-#: src/boot-environments.py:543
+#: src/boot-environments.py:622
 msgid "About"
 msgstr "О приложении"
 
-#: src/boot-environments.py:554
+#: src/boot-environments.py:633
 msgid ""
 "A simple preferences application to modify <a href='https://bsd-pl.org/"
 "assets/talks/2018-07-30_1_S%C5%82awomir-Wojciech-Wojtczak_ZFS-Boot-"
@@ -211,15 +238,15 @@ msgstr ""
 "pdf'> загрузочных сред ZFS</a><br><br>Исходный код: <a href='https://github."
 "com/alexax66/backup-station'>https://github.com/alexax66/backup-station</a>"
 
-#: src/boot-environments.py:561
+#: src/boot-environments.py:640
 msgid "Help"
 msgstr "Помощь"
 
-#: src/boot-environments.py:562
+#: src/boot-environments.py:641
 msgid "<h3>Description and usage</h3>"
 msgstr "<h3>Описание и использование</h3>"
 
-#: src/boot-environments.py:564
+#: src/boot-environments.py:643
 msgid ""
 "<hr><h4>General information</h4             <p>Boot Environments are "
 "bootable clones of snapshots of the working system.             Before "
@@ -258,6 +285,9 @@ msgid ""
 "li>             <p><li>Highlight a line in the list with the cursor and "
 "press the <b>[Remove]</b> button to remove the selected environment. This "
 "environment will disappear from the list after confirming the deletion.</"
+"li>             <p><li>Highlight a line in the list with the cursor and "
+"press the <b>[Rename]</b> button to rename the selected environment. This "
+"environment will appear in the list after entering its new name.</"
 "li>             <p><li>Click the button <b>[New...]</b> to create a new "
 "environment. The new environment will appear in the list after entering its "
 "name.</b></li></ul>             <p> You must have root privileges to work "
@@ -290,9 +320,13 @@ msgstr ""
 "При этом в поле <b>Точка монтирования</b> будет отображаться ее путь.</"
 "li><p><li>Для размонтрования окружения выделите курсором строку в списке и "
 "нажмите кнопку <b>[Отмонтировать]</b>. При этом в поле <b>Точка "
-"монтирования</b> путь отображаться не будет.</li> <p><li>Для удаления "
-"окружения выделите курсором строку в списке и нажмите кнопку <b>[Удаление]</"
+"монтирования</b> путь отображаться не будет.</li><p><li>Для удаления "
+"окружения выделите курсором строку в списке и нажмите кнопку <b>[Удалить]</"
 "b>. После подтверждения удаления это окружение отображаться в списке больше "
-"не будет.</li><p><li>Для создания нового окружения нажмите кнопку "
-"<b>[Новое....]</b></li></ul><p>Для работы с программой у Вас должны быть "
-"права превилигированного пользователя!"
+"не будет.<li> <p><li>Для переименования окружения выделите курсором строку в "
+"списке и нажмите кнопку <b>[Переименовать]</b>. После того как Вы введете "
+"новое имя, загрузочное окружение повится с новым именем в списке.</"
+"li><p><li>Для создания нового окружения нажмите кнопку <b>[Новое....]</b> "
+"После того как Вы введете имя, новое загрузочное окружение повится в "
+"списке.</li></ul><p>Для работы с программой у Вас должны быть права "
+"превилигированного пользователя!"

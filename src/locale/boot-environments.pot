@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 00:38+0300\n"
+"POT-Creation-Date: 2022-11-07 23:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,167 +33,194 @@ msgstr ""
 msgid "New..."
 msgstr ""
 
-#: src/boot-environments.py:119 src/boot-environments.py:390
+#: src/boot-environments.py:119 src/boot-environments.py:469
+msgid "Rename"
+msgstr ""
+
+#: src/boot-environments.py:122 src/boot-environments.py:393
 msgid "Remove"
 msgstr ""
 
-#: src/boot-environments.py:122 src/boot-environments.py:259
-#: src/boot-environments.py:268
+#: src/boot-environments.py:125 src/boot-environments.py:262
+#: src/boot-environments.py:271
 msgid "Unmount"
 msgstr ""
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Boot Environment"
 msgstr ""
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Active"
 msgstr ""
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Mountpoint"
 msgstr ""
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Space"
 msgstr ""
 
-#: src/boot-environments.py:174
+#: src/boot-environments.py:177
 msgid "Created"
 msgstr ""
 
-#: src/boot-environments.py:185
+#: src/boot-environments.py:188
 msgid "Now and on reboot"
 msgstr ""
 
-#: src/boot-environments.py:188
+#: src/boot-environments.py:191
 msgid "Now"
 msgstr ""
 
-#: src/boot-environments.py:190
+#: src/boot-environments.py:193
 msgid "On reboot"
 msgstr ""
 
-#: src/boot-environments.py:229
+#: src/boot-environments.py:232
 msgid "Restart"
 msgstr ""
 
-#: src/boot-environments.py:230
+#: src/boot-environments.py:233
 msgid ""
 "Are you sure you want to restart your computer now?\n"
 "All unsaved work will be lost."
 msgstr ""
 
-#: src/boot-environments.py:265
+#: src/boot-environments.py:268
 msgid "Mount"
 msgstr ""
 
-#: src/boot-environments.py:296 src/boot-environments.py:313
-#: src/boot-environments.py:352 src/boot-environments.py:369
-#: src/boot-environments.py:414 src/boot-environments.py:431
-#: src/boot-environments.py:478 src/boot-environments.py:495
+#: src/boot-environments.py:299 src/boot-environments.py:316
+#: src/boot-environments.py:355 src/boot-environments.py:372
+#: src/boot-environments.py:417 src/boot-environments.py:434
+#: src/boot-environments.py:493 src/boot-environments.py:510
+#: src/boot-environments.py:557 src/boot-environments.py:574
 msgid "Error"
 msgstr ""
 
-#: src/boot-environments.py:310
+#: src/boot-environments.py:313
 msgid "Could not activate Boot Environment"
 msgstr ""
 
-#: src/boot-environments.py:326
+#: src/boot-environments.py:329 src/boot-environments.py:446
 msgid "New"
 msgstr ""
 
-#: src/boot-environments.py:327
+#: src/boot-environments.py:330 src/boot-environments.py:447
 msgid "Boot Environment Name:"
 msgstr ""
 
-#: src/boot-environments.py:346
+#: src/boot-environments.py:349
 msgid "bectl create started"
 msgstr ""
 
-#: src/boot-environments.py:348
+#: src/boot-environments.py:351
 msgid "bectl create cannot be launched"
 msgstr ""
 
-#: src/boot-environments.py:366
+#: src/boot-environments.py:369
 msgid "Could not create Boot Environment"
 msgstr ""
 
-#: src/boot-environments.py:391
+#: src/boot-environments.py:394
 #, python-format
 msgid ""
 "Do you really want to remove %s?\n"
 "This cannot be undone."
 msgstr ""
 
-#: src/boot-environments.py:397
+#: src/boot-environments.py:400
 #, python-format
 msgid "Removing: %s"
 msgstr ""
 
-#: src/boot-environments.py:408
+#: src/boot-environments.py:411
 msgid "bectl destroy started"
 msgstr ""
 
-#: src/boot-environments.py:410
+#: src/boot-environments.py:413
 msgid "bectl destroy cannot be launched"
 msgstr ""
 
-#: src/boot-environments.py:428
+#: src/boot-environments.py:431
 msgid "Could not destroy Boot Environment"
 msgstr ""
 
-#: src/boot-environments.py:474
+#: src/boot-environments.py:470
+#, python-format
+msgid "Do you really want to rename %s?"
+msgstr ""
+
+#: src/boot-environments.py:476
+#, python-format
+msgid "Renaming: %s"
+msgstr ""
+
+#: src/boot-environments.py:487
+msgid "bectl renaming started"
+msgstr ""
+
+#: src/boot-environments.py:489
+msgid "bectl renaming cannot be launched"
+msgstr ""
+
+#: src/boot-environments.py:507
+msgid "Could not renaming  Boot Environment"
+msgstr ""
+
+#: src/boot-environments.py:553
 #, python-format
 msgid "bectl %s cannot be launched"
 msgstr ""
 
-#: src/boot-environments.py:492
+#: src/boot-environments.py:571
 #, python-format
 msgid "Could not %s Boot Environment"
 msgstr ""
 
-#: src/boot-environments.py:521
+#: src/boot-environments.py:600
 msgid "&Quit"
 msgstr ""
 
-#: src/boot-environments.py:522
+#: src/boot-environments.py:601
 msgid "Ctrl+Q"
 msgstr ""
 
-#: src/boot-environments.py:523
+#: src/boot-environments.py:602
 msgid "Exit application"
 msgstr ""
 
-#: src/boot-environments.py:526
+#: src/boot-environments.py:605
 msgid "&File"
 msgstr ""
 
-#: src/boot-environments.py:529
+#: src/boot-environments.py:608
 msgid "&About"
 msgstr ""
 
-#: src/boot-environments.py:530
+#: src/boot-environments.py:609
 msgid "About this application"
 msgstr ""
 
-#: src/boot-environments.py:533
+#: src/boot-environments.py:612
 msgid "&Usage"
 msgstr ""
 
-#: src/boot-environments.py:534
+#: src/boot-environments.py:613
 msgid "How use this application"
 msgstr ""
 
-#: src/boot-environments.py:536
+#: src/boot-environments.py:615
 msgid "&Help"
 msgstr ""
 
-#: src/boot-environments.py:543
+#: src/boot-environments.py:622
 msgid "About"
 msgstr ""
 
-#: src/boot-environments.py:554
+#: src/boot-environments.py:633
 msgid ""
 "A simple preferences application to modify <a href='https://bsd-pl.org/"
 "assets/talks/2018-07-30_1_S%C5%82awomir-Wojciech-Wojtczak_ZFS-Boot-"
@@ -202,15 +229,15 @@ msgid ""
 "alexax66/backup-station</a>"
 msgstr ""
 
-#: src/boot-environments.py:561
+#: src/boot-environments.py:640
 msgid "Help"
 msgstr ""
 
-#: src/boot-environments.py:562
+#: src/boot-environments.py:641
 msgid "<h3>Description and usage</h3>"
 msgstr ""
 
-#: src/boot-environments.py:564
+#: src/boot-environments.py:643
 msgid ""
 "<hr><h4>General information</h4             <p>Boot Environments are "
 "bootable clones of snapshots of the working system.             Before "
@@ -249,6 +276,9 @@ msgid ""
 "li>             <p><li>Highlight a line in the list with the cursor and "
 "press the <b>[Remove]</b> button to remove the selected environment. This "
 "environment will disappear from the list after confirming the deletion.</"
+"li>             <p><li>Highlight a line in the list with the cursor and "
+"press the <b>[Rename]</b> button to rename the selected environment. This "
+"environment will appear in the list after entering its new name.</"
 "li>             <p><li>Click the button <b>[New...]</b> to create a new "
 "environment. The new environment will appear in the list after entering its "
 "name.</b></li></ul>             <p> You must have root privileges to work "
