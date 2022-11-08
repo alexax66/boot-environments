@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-07 23:47+0300\n"
+"POT-Creation-Date: 2022-11-08 13:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "New..."
 msgstr ""
 
-#: src/boot-environments.py:119 src/boot-environments.py:469
+#: src/boot-environments.py:119
 msgid "Rename"
 msgstr ""
 
@@ -104,12 +104,12 @@ msgstr ""
 msgid "Could not activate Boot Environment"
 msgstr ""
 
-#: src/boot-environments.py:329 src/boot-environments.py:446
+#: src/boot-environments.py:329
 msgid "New"
 msgstr ""
 
-#: src/boot-environments.py:330 src/boot-environments.py:447
-msgid "Boot Environment Name:"
+#: src/boot-environments.py:330
+msgid "Enter Boot Environment name:"
 msgstr ""
 
 #: src/boot-environments.py:349
@@ -146,6 +146,14 @@ msgstr ""
 
 #: src/boot-environments.py:431
 msgid "Could not destroy Boot Environment"
+msgstr ""
+
+#: src/boot-environments.py:446 src/boot-environments.py:469
+msgid "Renaming"
+msgstr ""
+
+#: src/boot-environments.py:447
+msgid "Enter new Boot Environment name:"
 msgstr ""
 
 #: src/boot-environments.py:470

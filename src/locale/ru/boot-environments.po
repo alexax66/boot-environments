@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-07 23:47+0300\n"
-"PO-Revision-Date: 2022-11-07 23:51+0300\n"
+"POT-Creation-Date: 2022-11-08 13:28+0300\n"
+"PO-Revision-Date: 2022-11-08 13:29+0300\n"
 "Last-Translator: Alexander Alexeev <alexax66@gmail.com>\n"
 "Language-Team: Language locale/ru\n"
 "Language: ru\n"
@@ -34,7 +34,7 @@ msgstr "Перезапуск..."
 msgid "New..."
 msgstr "Новое..."
 
-#: src/boot-environments.py:119 src/boot-environments.py:469
+#: src/boot-environments.py:119
 msgid "Rename"
 msgstr "Переименовать"
 
@@ -107,13 +107,13 @@ msgstr "Ошибка"
 msgid "Could not activate Boot Environment"
 msgstr "Невозможно активироать это окружение"
 
-#: src/boot-environments.py:329 src/boot-environments.py:446
+#: src/boot-environments.py:329
 msgid "New"
 msgstr "Новое"
 
-#: src/boot-environments.py:330 src/boot-environments.py:447
-msgid "Boot Environment Name:"
-msgstr "Имя загрузочного окружения:"
+#: src/boot-environments.py:330
+msgid "Enter Boot Environment name:"
+msgstr "Ввдите имя загрузочного окружения:"
 
 #: src/boot-environments.py:349
 msgid "bectl create started"
@@ -153,13 +153,20 @@ msgstr "bectl не может запустить удаление"
 msgid "Could not destroy Boot Environment"
 msgstr "Невозможно удалить загрузочное окружение"
 
+#: src/boot-environments.py:446 src/boot-environments.py:469
+msgid "Renaming"
+msgstr "Переименование"
+
+#: src/boot-environments.py:447
+msgid "Enter new Boot Environment name:"
+msgstr "Введите новое имя для загрузочного окружения:"
+
 #: src/boot-environments.py:470
 #, python-format
 msgid "Do you really want to rename %s?"
 msgstr "Вы дествительно ходите переименовать %s?"
 
 #: src/boot-environments.py:476
-#, python-format
 msgid "Renaming: %s"
 msgstr "Переименование: %s "
 
@@ -327,6 +334,6 @@ msgstr ""
 "списке и нажмите кнопку <b>[Переименовать]</b>. После того как Вы введете "
 "новое имя, загрузочное окружение появится с новым именем в списке.</"
 "li><p><li>Для создания нового окружения нажмите кнопку <b>[Новое....]</b> "
-"После того как Вы введете имя, новое загрузочное окружение появится в "
-"списке.</li></ul><p>Для работы с программой у Вас должны быть права "
+"После того как Вы введете имя, новое загрузочное окружение появится в списке."
+"</li></ul><p>Для работы с программой у Вас должны быть права "
 "превилигированного пользователя!"
