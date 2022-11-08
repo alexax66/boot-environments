@@ -331,8 +331,8 @@ class BootEnvironmentsManager(object):
                                                   "")
         if ok and text:
 
-            text = text.replace(" ", "-")  # Replace space with '-'
-            text = re.sub('[^A-Za-z0-9\-]+', '', text)  # Remove remaining special characters
+            text = text.replace(" ", "_")  # Replace space with '_'
+            text = re.sub('[^A-Za-z0-9\-\_]+', '', text)  # Remove remaining special characters
 
             print(text)
 
@@ -448,8 +448,8 @@ class BootEnvironmentsManager(object):
                                                   "")
         if ok and text:
 
-            text = text.replace(" ", "-")  # Replace space with '-'
-            text = re.sub('[^A-Za-z0-9\-]+', '', text)  # Remove remaining special characters
+            text = text.replace(" ", "_")  # Replace space with '_'
+            text = re.sub('[^A-Za-z0-9\-\_]+', '', text)  # Remove remaining special characters
 
             print(text)
 
