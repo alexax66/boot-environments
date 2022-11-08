@@ -115,6 +115,9 @@ class BootEnvironmentsManager(object):
         new_button = self.buttonbox.addButton(QtWidgets.QDialogButtonBox.Ok)
         new_button.setText(_("New..."))
         new_button.clicked.connect(self.new)
+        rename_button = self.buttonbox.addButton(QtWidgets.QDialogButtonBox.Ok)
+        rename_button.setText(_("Rename"))
+        rename_button.clicked.connect(self.rename)
         remove_button = self.buttonbox.addButton(QtWidgets.QDialogButtonBox.Ok)
         remove_button.setText(_("Remove"))
         remove_button.clicked.connect(self.remove)
@@ -439,6 +442,82 @@ class BootEnvironmentsManager(object):
 
             self.timer.start()
 
+    def rename(self):
+        text, ok = QtWidgets.QInputDialog.getText(self.window, _("New"),
+                                                  _("Boot Environment Name:"), QtWidgets.QLineEdit.Normal,
+                                                  "")
+        if ok and text:
+
+            text = text.replace(" ", "-")  # Replace space with '-'
+            text = re.sub('[^A-Za-z0-9\-]+', '', text)  # Remove remaining special characters
+
+            print(text)
+
+            self.app.setOverrideCursor(
+                QtGui.QCursor(QtCore.Qt.WaitCursor))
+            self.timer.stop()
+
+        # print("Rename: %s" % self.selection_index)
+
+        if self.selection_index < 0:
+            return
+
+        boot_environment = self.boot_environments[self.selection_index]
+
+        reply = QtWidgets.QMessageBox.question(
+            self.window,
+            _("Rename"),
+            _("Do you really want to rename %s?") % boot_environment,
+            QtWidgets.QMessageBox.Cancel,
+            QtWidgets.QMessageBox.Ok
+        )
+
+        if reply == QtWidgets.QMessageBox.Ok:
+            print(_("Renaming: %s") % boot_environment)
+            self.app.setOverrideCursor(
+                QtGui.QCursor(QtCore.Qt.WaitCursor))
+            self.timer.stop()
+
+            p3 = QtCore.QProcess()
+            p3.setProgram("sudo")
+            p3.setArguments(["-A", "-E", "bectl", "rename", boot_environment, text])
+
+            try:
+                pid = p3.start()  # p.startDetached()
+                print(_("bectl renaming started"))
+            except:
+                error_string = _("bectl renaming cannot be launched")
+                print(error_string)
+                QtWidgets.QMessageBox.critical(
+                    self.window,
+                    _("Error"),
+                    error_string,
+                    QtWidgets.QMessageBox.Cancel
+                )
+                return  # Stop doing anything here
+
+            p3.waitForFinished(-1)
+
+            if p3.exitCode() != 0:
+                error_string = str(p3.readAll().data(), encoding='utf-8').replace("ERROR: ", "")
+                # FIXME: Sometimes we don't get the error message. Possibly we need to use
+                # something more complicated, like a QEventLoop?
+                # https://forum.qt.io/topic/75454/qprocess-readall-and-qprocess-readallstandardoutput-both-return-an-empty-string-after-qprocess-write-is-run
+                if error_string == "":
+                    error_string = _("Could not renaming  Boot Environment")
+                QtWidgets.QMessageBox.critical(
+                    self.window,
+                    _("Error"),
+                    error_string,
+                    QtWidgets.QMessageBox.Cancel
+                )
+
+            self.refresh_list_with_bectl()
+            self.app.setOverrideCursor(
+                QtGui.QCursor(QtCore.Qt.ArrowCursor))
+
+            self.timer.start()
+
     def mount(self):
         # print("Mount: %s" % self.selection_index)
 
@@ -601,6 +680,7 @@ class BootEnvironmentsManager(object):
             <p><li>Highlight a line in the list with the cursor and press the <b>[Mount]</b> button to mount the selected environment.  In this case, its path will be displayed in the <b>Mount point</b> field.</li> \
             <p><li>Highlight a line in the list with the cursor and press the <b>[Umount]</b> button to unmount the selected environment. In this case, the path will not be displayed in the <b>Mount point</b> field.</li> \
             <p><li>Highlight a line in the list with the cursor and press the <b>[Remove]</b> button to remove the selected environment. This environment will disappear from the list after confirming the deletion.</li> \
+            <p><li>Highlight a line in the list with the cursor and press the <b>[Rename]</b> button to rename the selected environment. This environment will appear in the list after entering its new name.</li> \
             <p><li>Click the button <b>[New...]</b> to create a new environment. The new environment will appear in the list after entering its name.</b></li></ul> \
             <p> You must have root privileges to work with this program!"))
         msg.exec()
